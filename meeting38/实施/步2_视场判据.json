@@ -1,0 +1,109 @@
+{
+  "像人-1": {
+    "route": "像人-1",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "单帧决定性（注视历史改变下一注视）",
+        "value": "Δ列=15, cos=0.828",
+        "threshold": "Δ列≥2 或 cos≤0.8",
+        "passed": true,
+        "note": "AI 式看：输出由单帧决定，此处必失败"
+      }
+    ]
+  },
+  "像人-2": {
+    "route": "像人-2",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "适应：全局渐变几乎不产生意外/眼跳",
+        "value": "意外均值=0.0524 眼跳=2",
+        "threshold": "意外≤0.2 且 跳≤2",
+        "passed": true,
+        "note": "光适应（局部归一化）+注视保持律"
+      },
+      {
+        "name": "变化优先：局部移动产生意外峰",
+        "value": 1.0,
+        "threshold": "≥0.5",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "变化优先：下一注视落到变化处",
+        "value": "命中",
+        "threshold": "命中",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "像人-3": {
+    "route": "像人-3",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "有变化帧 峰值意外",
+        "value": 0.9928,
+        "threshold": "≥0.5",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "无变化帧 峰值意外（视而不见）",
+        "value": 0.0,
+        "threshold": "≤0.15",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "注视链持续增长",
+        "value": 19,
+        "threshold": "≥8",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "视觉槽.元素s 仍为空（看 不依赖它）",
+        "value": 0,
+        "threshold": "==0",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "像人-4": {
+    "route": "像人-4",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "误差驱动注视命中率",
+        "value": 1.0,
+        "threshold": "≥0.80（随机≈0.007）",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "像人-5": {
+    "route": "像人-5",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "预测收敛比（熟悉后/首次新异）",
+        "value": 0.0,
+        "threshold": "≤0.4",
+        "passed": true,
+        "note": "熟悉末=0.0000  首次新异=0.0111"
+      },
+      {
+        "name": "新旧结构可分 AUC",
+        "value": 1.0,
+        "threshold": "≥0.90",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+ "任务": "做文档",
+ "主题": "AHI 第七轮 真机验收（演练档）",
+ "产物": {
+  "docx": "<workspace>/\03_AHI\\AHI3\\meeting41\\实施\\产物\\真机_真任务\\文档_328d9d47.docx",
+  "md": "<workspace>/\03_AHI\\AHI3\\meeting41\\实施\\产物\\真机_真任务\\文档_328d9d47.md"
+ },
+ "docx": {
+  "字节": 2259,
+  "sha256": "e25f1b3f5288c5add53c785b31f1a003dc717daaaf53ae3039fc3195071eaaf6",
+  "段数": 11,
+  "部件s": [
+   "[Content_Types].xml",
+   "_rels/.rels",
+   "word/_rels/document.xml.rels",
+   "word/document.xml",
+   "word/styles.xml"
+  ]
+ },
+ "段落数": 11,
+ "条目数": 2,
+ "检索条数": 0,
+ "检索": [],
+ "素材来源": "给定素材",
+ "md_sha256": "a4dfb6337e38d47c70cd40ea47191d77cb2c1bc60b89c354b0cdd929090bbd23",
+ "docx文本条数": 11,
+ "落盘": {
+  "docx存在": true,
+  "md存在": true
+ }
+}

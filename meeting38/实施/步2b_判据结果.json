@@ -1,0 +1,128 @@
+{
+  "A2C": {
+    "route": "A2-C 动作空间",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "4500 组合全编码",
+        "value": "OK",
+        "threshold": "0 异常",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "跨实例逐位一致",
+        "value": "一致",
+        "threshold": "一致",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "异组合码两两不同",
+        "value": 4500,
+        "threshold": "=4500",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.57
+  },
+  "A2E": {
+    "route": "A2-E 前向模型+EFE",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "EFE 选中已学匹配动作 @K=5",
+        "value": "30/30",
+        "threshold": "≥29/30",
+        "passed": true,
+        "note": "检索 cos≥0.9 且 risk≤0.05"
+      },
+      {
+        "name": "未见动作 ambiguity 均值 @K=5",
+        "value": 0.711,
+        "threshold": "≥0.4 且 >已学(≈0.000)",
+        "passed": true,
+        "note": "几何重钉：动作共享档位原子，未见的最近邻 cos≈0.47（08 规格 §6）"
+      },
+      {
+        "name": "EFE 选中已学匹配动作 @K=20",
+        "value": "30/30",
+        "threshold": "≥29/30",
+        "passed": true,
+        "note": "检索 cos≥0.9 且 risk≤0.05"
+      },
+      {
+        "name": "未见动作 ambiguity 均值 @K=20",
+        "value": 0.598,
+        "threshold": "≥0.4 且 >已学(≈0.000)",
+        "passed": true,
+        "note": "几何重钉：动作共享档位原子，未见的最近邻 cos≈0.47（08 规格 §6）"
+      },
+      {
+        "name": "EFE 选中已学匹配动作 @K=40",
+        "value": "30/30",
+        "threshold": "≥29/30",
+        "passed": true,
+        "note": "检索 cos≥0.9 且 risk≤0.05"
+      },
+      {
+        "name": "未见动作 ambiguity 均值 @K=40",
+        "value": 0.54,
+        "threshold": "≥0.4 且 >已学(≈0.000)",
+        "passed": true,
+        "note": "几何重钉：动作共享档位原子，未见的最近邻 cos≈0.47（08 规格 §6）"
+      }
+    ],
+    "secs": 6.92
+  },
+  "A2S": {
+    "route": "A2-S 嘴/手同打分器",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "表达目标 → 嘴候选胜",
+        "value": "20/20",
+        "threshold": "≥19/20",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "操作目标 → 手候选胜",
+        "value": "20/20",
+        "threshold": "≥19/20",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.14
+  },
+  "A2D": {
+    "route": "A2-D 确定性",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "双实例选择链逐位一致",
+        "value": "ec847782166741abcd4563b7",
+        "threshold": "==ec847782166741abcd4563b7",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.15
+  },
+  "A2T": {
+    "route": "A2-T 延迟",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "50 候选 EFE 选择 p95",
+        "value": 0.235,
+        "threshold": "≤3ms",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.08
+  }
+}

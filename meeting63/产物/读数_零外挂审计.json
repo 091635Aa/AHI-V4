@@ -1,0 +1,35 @@
+{
+ "工具": "审计_零外挂.py",
+ "静态": {
+  "文件数": 6,
+  "禁词命中": [],
+  "禁包命中": [],
+  "禁词命中数": 0,
+  "禁包命中数": 0
+ },
+ "运行期": {
+  "零外挂读入": 0,
+  "音频读入": 0,
+  "权重读入": 0,
+  "全部读入": [
+   "<workspace>/\03_AHI\\.venv\\Lib\\site-packages\\pypinyin\\pinyin_dict.json",
+   "<workspace>/\03_AHI\\.venv\\Lib\\site-packages\\pypinyin\\phrases_dict.json",
+   "<workspace>/\03_AHI\\.venv\\lib\\site-packages\\jieba\\dict.txt",
+   "<home>/\AppData\\Local\\Temp\\jieba.cache"
+  ],
+  "全部读入数": 4,
+  "禁模块命中": [],
+  "禁模块命中数": 0,
+  "波形样本数": 52479
+ },
+ "确定性": {
+  "两趟逐位同": true,
+  "sha256": "b7cf92f79b6b26921cb7d02061a9fc7c9123c6f66a7f10e6a0785a79df425980",
+  "sha256_2": "b7cf92f79b6b26921cb7d02061a9fc7c9123c6f66a7f10e6a0785a79df425980"
+ },
+ "A_零外部音频与权重读入": true,
+ "B_无框架无外挂": true,
+ "C_确定性": true,
+ "注": "A：生成路径零音频/零权重读入（文本→拼音的**字典**读取属既有 v5 语料基础设施，非音频/非模型）；B：静态禁词/禁包 0 命中 + 运行期 sys.modules 禁名单 0 命中；C：两趟逐位同。",
+ "通过": true
+}

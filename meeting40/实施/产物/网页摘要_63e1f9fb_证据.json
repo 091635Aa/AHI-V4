@@ -1,0 +1,31 @@
+{
+ "任务": "做文档",
+ "主题": "（注意：前台未切到目标页，实际读到的是另一个窗口）网页摘要：动效与颜色增强创意方案 — DeepSeek Harness",
+ "产物": {
+  "docx": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_63e1f9fb.docx",
+  "md": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_63e1f9fb.md"
+ },
+ "docx": {
+  "字节": 2533,
+  "sha256": "22d8a384e2ca5235831303def76ee468f1497db28255b409448923e33bc6efa8",
+  "段数": 23,
+  "部件s": [
+   "[Content_Types].xml",
+   "_rels/.rels",
+   "word/_rels/document.xml.rels",
+   "word/document.xml",
+   "word/styles.xml"
+  ]
+ },
+ "段落数": 23,
+ "条目数": 8,
+ "检索条数": 0,
+ "检索": [],
+ "素材来源": "记忆检索+给定素材",
+ "md_sha256": "0f33513028e075ba14919b793a916e97a17fe6cb219dc89b4e9c583937feca40",
+ "docx文本条数": 23,
+ "落盘": {
+  "docx存在": true,
+  "md存在": true
+ }
+}

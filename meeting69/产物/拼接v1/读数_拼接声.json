@@ -1,0 +1,59 @@
+{
+ "工具": "判据_拼接声.py",
+ "时间": "2026-10-22 09:32:35",
+ "项": [
+  {
+   "样本": "主句",
+   "文本": "今天天气很好我听见了自己的声音我想再说一遍",
+   "路径": "<workspace>/\03_AHI\\AHI4\\meeting69\\产物\\拼接v1\\拼接_主句.wav",
+   "sha256": "ad9f068b62bd1d9dfa6d89dafb7dad36ee92da587a08826c2e305f77204508f2",
+   "Paraformer": "我 今 我 今 天 好 我 有 点 广 场 语 我 以 为 是 唱 是",
+   "Paraformer_CER": 0.8571,
+   "Whisper": "",
+   "Whisper_CER": 1.0,
+   "CAM_真1": 0.4788,
+   "CAM_真2": 0.6575,
+   "CAM_均值": 0.5681
+  },
+  {
+   "样本": "M2a",
+   "文本": "今天的风很轻我慢慢说给你听",
+   "路径": "<workspace>/\03_AHI\\AHI4\\meeting69\\产物\\拼接v1\\拼接_M2a.wav",
+   "sha256": "da2f8262db36d54010b62d6b2c9b641ed3b589ff11f0260c502b5007ef7b1b53",
+   "Paraformer": "不 至 于 我 有 个 注 意",
+   "Paraformer_CER": 0.9231,
+   "Whisper": "请不启离分裂我有个朋友",
+   "Whisper_CER": 0.9231,
+   "CAM_真1": 0.4622,
+   "CAM_真2": 0.6507,
+   "CAM_均值": 0.5565
+  },
+  {
+   "样本": "M2b",
+   "文本": "窗外的雨停了我该休息一会",
+   "路径": "<workspace>/\03_AHI\\AHI4\\meeting69\\产物\\拼接v1\\拼接_M2b.wav",
+   "sha256": "b98ed7836b908a95ce28ae5bbed7ebb85714f8c0bd7ac4542fc204f6f5d11243",
+   "Paraformer": "哦 我 以 以 为 以 为",
+   "Paraformer_CER": 0.9167,
+   "Whisper": "咦 咦 咦 咦 咦 咦",
+   "Whisper_CER": 1.0,
+   "CAM_真1": 0.4517,
+   "CAM_真2": 0.5536,
+   "CAM_均值": 0.5027
+  },
+  {
+   "样本": "M2c",
+   "文本": "你先别走我还想再说两句",
+   "路径": "<workspace>/\03_AHI\\AHI4\\meeting69\\产物\\拼接v1\\拼接_M2c.wav",
+   "sha256": "72ec4fc8bfd6a0e04dd2fda8902b4227f0e736a2b2bc80ad80389dec086a380d",
+   "Paraformer": "我 们 我 现 在 还 是 欢",
+   "Paraformer_CER": 0.9091,
+   "Whisper": "",
+   "Whisper_CER": 1.0,
+   "CAM_真1": 0.5023,
+   "CAM_真2": 0.6119,
+   "CAM_均值": 0.5571
+  }
+ ],
+ "耗时秒": 123.6
+}

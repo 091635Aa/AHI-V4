@@ -1,0 +1,10 @@
+﻿import json
+d=json.load(open(r"<workspace>/03_AHI\AHI4\meeting64\产物\判据\基线_v8_1_复现.json",encoding="utf-8"))
+print("验收:",json.dumps(d["验收"],ensure_ascii=False,indent=1)[:900])
+print("逐句均值:",d["逐句均值"])
+print("逐角色均值:",d["逐角色均值"])
+print("多句CER均值:",d["多句CER均值"],"| 相对下降:",d["相对基线下降"],"| 两趟一致:",d["两趟一致"])
+print("sham:",d["sham"])
+print("首样本 wav:",d["逐样本"]["S1·EmoCompanion"]["wav"])
+print("归因(鼻尾类):",{k:v for k,v in d["逐类归因"].items() if k.startswith("鼻尾")})
+print("归因 size:",len(d["逐类归因"]))

@@ -1,0 +1,176 @@
+{
+  "J1视场槽/视觉槽": {
+    "route": "J1",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "视场槽.注视链随拍增长",
+        "value": 6,
+        "threshold": "≥6",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "视场槽.注视已写入",
+        "value": "(8, 4, 6)",
+        "threshold": "非空",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "视觉槽帧号=拍数",
+        "value": 6,
+        "threshold": "==6",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "视觉槽变化率/屏幕保字段",
+        "value": "0.000/(192, 144)",
+        "threshold": "浮点/(W,H)",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J2元素保字段": {
+    "route": "J2",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "元素非空（静帧确认通道）",
+        "value": 2,
+        "threshold": "≥1",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "字段齐全",
+        "value": true,
+        "threshold": "全元素含7键",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "字恒空（C9 禁 OCR）",
+        "value": true,
+        "threshold": "全空",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "框/心在屏内且心=框中心",
+        "value": "在屏=True 心对=True",
+        "threshold": "均真",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J3惊讶通道": {
+    "route": "J3",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "变化拍出现高置信结构（惊讶区）",
+        "value": 1.0,
+        "threshold": ">0.5",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "结构与变化格重叠",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J4确认通道+嵌套": {
+    "route": "J4",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "静帧在场者（确认通道）",
+        "value": 2,
+        "threshold": "≥2",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "含嵌套对（窗⊃格）",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "语义容器树最大深度",
+        "value": 2,
+        "threshold": "≥2（W4 前提）",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J5句柄稳定": {
+    "route": "J5",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "静帧句柄/框集连续两拍不变",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": "拍3→4、拍4→5 逐元素一致"
+      }
+    ]
+  },
+  "J6确定性": {
+    "route": "J6",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "视场注视链 + 元素表逐位一致",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J7下线审计": {
+    "route": "J7",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "根目录 *.py 无 yolo/ocr/旧检测残留（token 级）",
+        "value": [],
+        "threshold": "空",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "器官_眼 已接视场前端且无 torch",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "J8性能登记": {
+    "route": "J8",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "前端单拍 1080p（登记）",
+        "value": "均值29.4ms P95=30.0ms",
+        "threshold": "≤200（登记项）",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  }
+}

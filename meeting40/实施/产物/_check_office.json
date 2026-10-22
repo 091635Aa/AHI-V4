@@ -1,0 +1,43 @@
+{
+  "format": "docx",
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "package",
+      "status": "pass"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "AHI 3.0 \u57fa\u7840\u4efb\u52a1\u4e0e\u81ea\u6211\u610f\u8bc6"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "\u770b\u7f51\u9875"
+    },
+    {
+      "id": "contains",
+      "status": "pass",
+      "text": "\u5de5\u7a0b\u81ea\u6211\u610f\u8bc6"
+    }
+  ],
+  "summary": {
+    "paragraphs": 18,
+    "tables": [],
+    "sections": [
+      {
+        "page_twips": {
+          "w": "11906",
+          "h": "16838"
+        },
+        "margins_twips": {
+          "top": "1440",
+          "right": "1440",
+          "bottom": "1440",
+          "left": "1440"
+        }
+      }
+    ]
+  }
+}

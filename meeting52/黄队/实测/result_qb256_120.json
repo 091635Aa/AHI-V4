@@ -1,0 +1,82 @@
+{
+ "config": "qb256",
+ "horizon": 120,
+ "python": "3.10.11",
+ "thread_env": {
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1"
+ },
+ "cpu_count": 16,
+ "arch": "AMD64",
+ "concurrency_start": {
+  "cpu_percent_0.3s": 39.4,
+  "python_proc_count": 4
+ },
+ "device_start": {
+  "nvidia_used_MiB": 190,
+  "nvidia_free_MiB": 15986
+ },
+ "baseline_before": {
+  "rss_MB": 28.08,
+  "private_commit_MB": 16.93,
+  "peak_wset_MB": 28.12,
+  "peak_commit_MB": 17.01,
+  "pagefile_MB": 16.93
+ },
+ "build_s": 0.055,
+ "import_plus_build_s": 0.07,
+ "after_build": {
+  "rss_MB": 41.15,
+  "private_commit_MB": 74.87,
+  "peak_wset_MB": 56.07,
+  "peak_commit_MB": 74.87,
+  "pagefile_MB": 74.87
+ },
+ "after_warmup": {
+  "rss_MB": 51.48,
+  "private_commit_MB": 70.64,
+  "peak_wset_MB": 80.78,
+  "peak_commit_MB": 101.5,
+  "pagefile_MB": 70.64
+ },
+ "run_s": 9.1,
+ "ticks_per_s": 13.19,
+ "tick_ms": {
+  "median": 69.53,
+  "min": 53.25,
+  "p90": 102.14,
+  "max": 133.53
+ },
+ "sampled_peak": {
+  "rss_MB": 84.13,
+  "private_commit_MB": 103.41
+ },
+ "end": {
+  "rss_MB": 51.62,
+  "private_commit_MB": 69.8,
+  "peak_wset_MB": 86.75,
+  "peak_commit_MB": 105.07,
+  "pagefile_MB": 69.8
+ },
+ "device_end": {
+  "nvidia_used_MiB": 190,
+  "nvidia_free_MiB": 15986
+ },
+ "device_delta_used_MiB": 0,
+ "concurrency_end": {
+  "cpu_percent_0.3s": 16.3,
+  "python_proc_count": 4
+ },
+ "allocator": {
+  "note": "numpy-only; torch not imported",
+  "max_memory_allocated_MB": 0.0
+ },
+ "five_tuple": {
+  "peak_wset_MB": 86.75,
+  "peak_commit_MB": 105.07,
+  "peak_rss_sampled_MB": 84.13,
+  "device_delta_MiB": 0,
+  "allocator_max_alloc_MB": 0.0
+ }
+}

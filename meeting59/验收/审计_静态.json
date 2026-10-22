@@ -1,0 +1,311 @@
+{
+ "总PASS": true,
+ "禁import": {
+  "命中": [],
+  "扫描文件": [
+   {
+    "文件": "实施\\合成_测试音频.py",
+    "import": [
+     "__future__",
+     "glob",
+     "json",
+     "numpy",
+     "os",
+     "sys",
+     "声学工具",
+     "接口契约_角色声线",
+     "谱包络_校正",
+     "韵律_人类"
+    ]
+   },
+   {
+    "文件": "实施\\声学工具.py",
+    "import": [
+     "__future__",
+     "hashlib",
+     "numpy",
+     "os",
+     "scipy",
+     "sys",
+     "wave",
+     "声带",
+     "接口契约_角色声线"
+    ]
+   },
+   {
+    "文件": "实施\\拟合_参考声线.py",
+    "import": [
+     "__future__",
+     "glob",
+     "json",
+     "numpy",
+     "os",
+     "sys",
+     "声学工具",
+     "接口契约_角色声线",
+     "谱包络_校正",
+     "韵律_人类"
+    ]
+   },
+   {
+    "文件": "实施\\探针_交付指标.py",
+    "import": [
+     "__future__",
+     "glob",
+     "json",
+     "numpy",
+     "os",
+     "sys",
+     "声学工具"
+    ]
+   },
+   {
+    "文件": "实施\\谱包络_校正.py",
+    "import": [
+     "__future__",
+     "json",
+     "numpy",
+     "os",
+     "sys",
+     "声学工具",
+     "接口契约_角色声线"
+    ]
+   },
+   {
+    "文件": "实施\\韵律_人类.py",
+    "import": [
+     "__future__",
+     "glob",
+     "jieba",
+     "json",
+     "numpy",
+     "os",
+     "pypinyin",
+     "sys",
+     "声学工具",
+     "接口契约_角色声线",
+     "谱包络_校正"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_bili.py",
+    "import": [
+     "hashlib",
+     "http",
+     "json",
+     "re",
+     "sys",
+     "time",
+     "urllib"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_侧信号与F0.py",
+    "import": [
+     "json",
+     "numpy",
+     "scipy",
+     "sys"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_写manifest.py",
+    "import": [
+     "datetime",
+     "hashlib",
+     "json",
+     "os"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_切段.py",
+    "import": [
+     "json",
+     "numpy",
+     "os",
+     "scipy",
+     "sys"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_可视化.py",
+    "import": [
+     "matplotlib",
+     "numpy",
+     "scipy",
+     "sys",
+     "工具_核验分析"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_放大谱图.py",
+    "import": [
+     "matplotlib",
+     "numpy",
+     "scipy",
+     "sys",
+     "工具_核验分析"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_核验分析.py",
+    "import": [
+     "json",
+     "numpy",
+     "os",
+     "scipy",
+     "sys"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_深查.py",
+    "import": [
+     "json",
+     "numpy",
+     "scipy",
+     "sys",
+     "工具_侧信号与F0"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_点查.py",
+    "import": [
+     "numpy",
+     "scipy",
+     "sys",
+     "工具_核验分析"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_片段统计.py",
+    "import": [
+     "hashlib",
+     "json",
+     "numpy",
+     "os",
+     "scipy",
+     "sys",
+     "工具_核验分析"
+    ]
+   },
+   {
+    "文件": "素材\\洛天依\\工具_片段谱图.py",
+    "import": [
+     "matplotlib",
+     "numpy",
+     "scipy",
+     "sys",
+     "工具_核验分析"
+    ]
+   },
+   {
+    "文件": "验收\\判定_阶段B.py",
+    "import": [
+     "__future__",
+     "argparse",
+     "glob",
+     "itertools",
+     "json",
+     "math",
+     "numpy",
+     "os",
+     "sys",
+     "time",
+     "合成_测试音频",
+     "接口契约_角色声线",
+     "测量_声学",
+     "禁区审计",
+     "韵律_人类"
+    ]
+   },
+   {
+    "文件": "验收\\测量_声学.py",
+    "import": [
+     "__future__",
+     "argparse",
+     "glob",
+     "hashlib",
+     "json",
+     "math",
+     "numpy",
+     "os",
+     "scipy",
+     "sys",
+     "time"
+    ]
+   },
+   {
+    "文件": "验收\\禁区审计.py",
+    "import": [
+     "__future__",
+     "argparse",
+     "ast",
+     "hashlib",
+     "json",
+     "os",
+     "sys"
+    ]
+   },
+   {
+    "文件": "验收\\自检.py",
+    "import": [
+     "__future__",
+     "glob",
+     "json",
+     "math",
+     "numpy",
+     "os",
+     "scipy",
+     "sys",
+     "time",
+     "测量_声学"
+    ]
+   }
+  ],
+  "PASS": true
+ },
+ "视频新增": {
+  "meeting59_视频文件": [],
+  "PASS": true
+ },
+ "基线比对": {
+  "项": [
+   {
+    "名": "视频目录mtime未变",
+    "通过": true,
+    "读数": {
+     "基线": 1792383092.3371794,
+     "现状": 1792383092.3371794
+    }
+   },
+   {
+    "名": "视频文件无新增/删除/改写",
+    "通过": true,
+    "读数": {
+     "新增": [],
+     "删除": [],
+     "改写": []
+    }
+   },
+   {
+    "名": "meeting58既有.py未改",
+    "通过": true,
+    "读数": {
+     "新增": [],
+     "删除": [],
+     "改写": []
+    }
+   },
+   {
+    "名": "meeting32/声带.py未改",
+    "通过": true,
+    "读数": {
+     "基线sha256": "8c4f4670e6b1375ceaaea9a331b789381c5ff115c37c5c7251c36d4af26b9dbe",
+     "现状sha256": "8c4f4670e6b1375ceaaea9a331b789381c5ff115c37c5c7251c36d4af26b9dbe"
+    }
+   }
+  ],
+  "PASS": true
+ },
+ "基线记录时间": "2026-10-19T12:43:10"
+}

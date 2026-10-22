@@ -1,0 +1,755 @@
+{
+ "schema": "yellow-R3-resource-measurement-v1",
+ "time": "2026-10-17T21:35+08:00",
+ "host": {
+  "python": "3.10.11",
+  "cpu_count": 16
+ },
+ "thread_lock": {
+  "env": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  },
+  "note": "五线程环境变量均=1"
+ },
+ "runs": {
+  "chain1024_120": {
+   "config": "chain1024",
+   "horizon": 120,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 32.6,
+    "python_proc_count": 10
+   },
+   "device_start": {
+    "nvidia_used_MiB": 187,
+    "nvidia_free_MiB": 15989
+   },
+   "baseline_before": {
+    "rss_MB": 28.03,
+    "private_commit_MB": 16.86,
+    "peak_wset_MB": 28.07,
+    "peak_commit_MB": 16.94,
+    "pagefile_MB": 16.86
+   },
+   "build_s": 10.437,
+   "engine_D": 1024,
+   "import_plus_build_s": 10.452,
+   "after_build": {
+    "rss_MB": 114.73,
+    "private_commit_MB": 145.88,
+    "peak_wset_MB": 114.73,
+    "peak_commit_MB": 145.88,
+    "pagefile_MB": 145.88
+   },
+   "after_warmup": {
+    "rss_MB": 129.82,
+    "private_commit_MB": 188.52,
+    "peak_wset_MB": 145.73,
+    "peak_commit_MB": 204.61,
+    "pagefile_MB": 188.52
+   },
+   "run_s": 11.845,
+   "ticks_per_s": 10.13,
+   "tick_ms": {
+    "median": 28.64,
+    "min": 24.4,
+    "p90": 33.98,
+    "max": 8300.56
+   },
+   "sampled_peak": {
+    "rss_MB": 167.76,
+    "private_commit_MB": 217.0
+   },
+   "end": {
+    "rss_MB": 151.87,
+    "private_commit_MB": 200.93,
+    "peak_wset_MB": 167.9,
+    "peak_commit_MB": 217.59,
+    "pagefile_MB": 200.93
+   },
+   "device_end": {
+    "nvidia_used_MiB": 187,
+    "nvidia_free_MiB": 15989
+   },
+   "device_delta_used_MiB": 0,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 54.2,
+    "python_proc_count": 12
+   },
+   "allocator": {
+    "note": "numpy-only; torch not imported",
+    "max_memory_allocated_MB": 0.0
+   },
+   "five_tuple": {
+    "peak_wset_MB": 167.9,
+    "peak_commit_MB": 217.59,
+    "peak_rss_sampled_MB": 167.76,
+    "device_delta_MiB": 0,
+    "allocator_max_alloc_MB": 0.0
+   }
+  },
+  "chain1024_2000": {
+   "config": "chain1024",
+   "horizon": 2000,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 68.4,
+    "python_proc_count": 12
+   },
+   "device_start": {
+    "nvidia_used_MiB": 187,
+    "nvidia_free_MiB": 15989
+   },
+   "baseline_before": {
+    "rss_MB": 27.96,
+    "private_commit_MB": 16.77,
+    "peak_wset_MB": 28.0,
+    "peak_commit_MB": 16.85,
+    "pagefile_MB": 16.77
+   },
+   "build_s": 11.869,
+   "engine_D": 1024,
+   "import_plus_build_s": 11.888,
+   "after_build": {
+    "rss_MB": 113.88,
+    "private_commit_MB": 145.29,
+    "peak_wset_MB": 114.89,
+    "peak_commit_MB": 146.32,
+    "pagefile_MB": 145.29
+   },
+   "after_warmup": {
+    "rss_MB": 128.47,
+    "private_commit_MB": 187.85,
+    "peak_wset_MB": 144.36,
+    "peak_commit_MB": 203.93,
+    "pagefile_MB": 187.85
+   },
+   "run_s": 81.022,
+   "ticks_per_s": 24.68,
+   "tick_ms": {
+    "median": 30.44,
+    "min": 23.28,
+    "p90": 49.07,
+    "max": 13954.62
+   },
+   "sampled_peak": {
+    "rss_MB": 254.95,
+    "private_commit_MB": 306.06
+   },
+   "end": {
+    "rss_MB": 240.57,
+    "private_commit_MB": 289.88,
+    "peak_wset_MB": 256.59,
+    "peak_commit_MB": 306.11,
+    "pagefile_MB": 289.88
+   },
+   "device_end": {
+    "nvidia_used_MiB": 186,
+    "nvidia_free_MiB": 15990
+   },
+   "device_delta_used_MiB": -1,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 29.1,
+    "python_proc_count": 8
+   },
+   "allocator": {
+    "note": "numpy-only; torch not imported",
+    "max_memory_allocated_MB": 0.0
+   },
+   "five_tuple": {
+    "peak_wset_MB": 256.59,
+    "peak_commit_MB": 306.11,
+    "peak_rss_sampled_MB": 254.95,
+    "device_delta_MiB": -1,
+    "allocator_max_alloc_MB": 0.0
+   }
+  },
+  "qb256_120": {
+   "config": "qb256",
+   "horizon": 120,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 39.4,
+    "python_proc_count": 4
+   },
+   "device_start": {
+    "nvidia_used_MiB": 190,
+    "nvidia_free_MiB": 15986
+   },
+   "baseline_before": {
+    "rss_MB": 28.08,
+    "private_commit_MB": 16.93,
+    "peak_wset_MB": 28.12,
+    "peak_commit_MB": 17.01,
+    "pagefile_MB": 16.93
+   },
+   "build_s": 0.055,
+   "import_plus_build_s": 0.07,
+   "after_build": {
+    "rss_MB": 41.15,
+    "private_commit_MB": 74.87,
+    "peak_wset_MB": 56.07,
+    "peak_commit_MB": 74.87,
+    "pagefile_MB": 74.87
+   },
+   "after_warmup": {
+    "rss_MB": 51.48,
+    "private_commit_MB": 70.64,
+    "peak_wset_MB": 80.78,
+    "peak_commit_MB": 101.5,
+    "pagefile_MB": 70.64
+   },
+   "run_s": 9.1,
+   "ticks_per_s": 13.19,
+   "tick_ms": {
+    "median": 69.53,
+    "min": 53.25,
+    "p90": 102.14,
+    "max": 133.53
+   },
+   "sampled_peak": {
+    "rss_MB": 84.13,
+    "private_commit_MB": 103.41
+   },
+   "end": {
+    "rss_MB": 51.62,
+    "private_commit_MB": 69.8,
+    "peak_wset_MB": 86.75,
+    "peak_commit_MB": 105.07,
+    "pagefile_MB": 69.8
+   },
+   "device_end": {
+    "nvidia_used_MiB": 190,
+    "nvidia_free_MiB": 15986
+   },
+   "device_delta_used_MiB": 0,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 16.3,
+    "python_proc_count": 4
+   },
+   "allocator": {
+    "note": "numpy-only; torch not imported",
+    "max_memory_allocated_MB": 0.0
+   },
+   "five_tuple": {
+    "peak_wset_MB": 86.75,
+    "peak_commit_MB": 105.07,
+    "peak_rss_sampled_MB": 84.13,
+    "device_delta_MiB": 0,
+    "allocator_max_alloc_MB": 0.0
+   }
+  },
+  "qb256_2000": {
+   "config": "qb256",
+   "horizon": 2000,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 25.1,
+    "python_proc_count": 6
+   },
+   "device_start": {
+    "nvidia_used_MiB": 190,
+    "nvidia_free_MiB": 15986
+   },
+   "baseline_before": {
+    "rss_MB": 28.0,
+    "private_commit_MB": 16.86,
+    "peak_wset_MB": 28.04,
+    "peak_commit_MB": 16.94,
+    "pagefile_MB": 16.86
+   },
+   "build_s": 0.063,
+   "import_plus_build_s": 0.08,
+   "after_build": {
+    "rss_MB": 41.41,
+    "private_commit_MB": 75.07,
+    "peak_wset_MB": 56.32,
+    "peak_commit_MB": 75.11,
+    "pagefile_MB": 75.07
+   },
+   "after_warmup": {
+    "rss_MB": 51.71,
+    "private_commit_MB": 70.18,
+    "peak_wset_MB": 81.04,
+    "peak_commit_MB": 101.95,
+    "pagefile_MB": 70.18
+   },
+   "run_s": 162.465,
+   "ticks_per_s": 12.31,
+   "tick_ms": {
+    "median": 71.17,
+    "min": 49.3,
+    "p90": 123.36,
+    "max": 197.49
+   },
+   "sampled_peak": {
+    "rss_MB": 86.67,
+    "private_commit_MB": 105.46
+   },
+   "end": {
+    "rss_MB": 52.48,
+    "private_commit_MB": 71.45,
+    "peak_wset_MB": 87.96,
+    "peak_commit_MB": 106.54,
+    "pagefile_MB": 71.45
+   },
+   "device_end": {
+    "nvidia_used_MiB": 187,
+    "nvidia_free_MiB": 15989
+   },
+   "device_delta_used_MiB": -3,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 41.2,
+    "python_proc_count": 10
+   },
+   "allocator": {
+    "note": "numpy-only; torch not imported",
+    "max_memory_allocated_MB": 0.0
+   },
+   "five_tuple": {
+    "peak_wset_MB": 87.96,
+    "peak_commit_MB": 106.54,
+    "peak_rss_sampled_MB": 86.67,
+    "device_delta_MiB": -3,
+    "allocator_max_alloc_MB": 0.0
+   }
+  },
+  "torch_chain1024_120": {
+   "config": "torch_chain1024",
+   "horizon": 120,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 33.3,
+    "python_proc_count": 8
+   },
+   "device_start": {
+    "nvidia_used_MiB": 186,
+    "nvidia_free_MiB": 15990
+   },
+   "baseline_before": {
+    "rss_MB": 28.04,
+    "private_commit_MB": 16.89,
+    "peak_wset_MB": 28.08,
+    "peak_commit_MB": 16.96,
+    "pagefile_MB": 16.89
+   },
+   "torch_import_s": 2.974,
+   "torch_version": "2.14.0+cu130",
+   "build_s": 10.015,
+   "engine_D": 1024,
+   "import_plus_build_s": 12.998,
+   "after_build": {
+    "rss_MB": 578.82,
+    "private_commit_MB": 1005.48,
+    "peak_wset_MB": 578.82,
+    "peak_commit_MB": 1005.48,
+    "pagefile_MB": 1005.48
+   },
+   "after_warmup": {
+    "rss_MB": 596.86,
+    "private_commit_MB": 1050.47,
+    "peak_wset_MB": 612.78,
+    "peak_commit_MB": 1066.54,
+    "pagefile_MB": 1050.47
+   },
+   "run_s": 13.147,
+   "ticks_per_s": 9.13,
+   "tick_ms": {
+    "median": 42.97,
+    "min": 28.6,
+    "p90": 57.16,
+    "max": 7888.63
+   },
+   "sampled_peak": {
+    "rss_MB": 632.89,
+    "private_commit_MB": 1076.83
+   },
+   "end": {
+    "rss_MB": 617.41,
+    "private_commit_MB": 1061.76,
+    "peak_wset_MB": 633.27,
+    "peak_commit_MB": 1077.88,
+    "pagefile_MB": 1061.76
+   },
+   "device_end": {
+    "nvidia_used_MiB": 185,
+    "nvidia_free_MiB": 15991
+   },
+   "device_delta_used_MiB": -1,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 53.9,
+    "python_proc_count": 8
+   },
+   "allocator": {
+    "max_memory_allocated_MB": 0.0,
+    "max_memory_reserved_MB": 0.0,
+    "cuda_available": true,
+    "is_initialized": false
+   },
+   "five_tuple": {
+    "peak_wset_MB": 633.27,
+    "peak_commit_MB": 1077.88,
+    "peak_rss_sampled_MB": 632.89,
+    "device_delta_MiB": -1,
+    "allocator_max_alloc_MB": 0.0
+   }
+  },
+  "torch_only_120": {
+   "config": "torch_only",
+   "horizon": 120,
+   "python": "3.10.11",
+   "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+   },
+   "cpu_count": 16,
+   "arch": "AMD64",
+   "concurrency_start": {
+    "cpu_percent_0.3s": 22.0,
+    "python_proc_count": 8
+   },
+   "device_start": {
+    "nvidia_used_MiB": 186,
+    "nvidia_free_MiB": 15990
+   },
+   "baseline_before": {
+    "rss_MB": 28.09,
+    "private_commit_MB": 16.93,
+    "peak_wset_MB": 28.12,
+    "peak_commit_MB": 17.01,
+    "pagefile_MB": 16.93
+   },
+   "torch_import_s": 2.91,
+   "torch_version": "2.14.0+cu130",
+   "build_s": 0.0,
+   "import_plus_build_s": 2.91,
+   "after_build": {
+    "rss_MB": 498.94,
+    "private_commit_MB": 881.68,
+    "peak_wset_MB": 498.94,
+    "peak_commit_MB": 881.68,
+    "pagefile_MB": 881.68
+   },
+   "after_warmup": {
+    "rss_MB": 498.94,
+    "private_commit_MB": 881.68,
+    "peak_wset_MB": 498.94,
+    "peak_commit_MB": 881.68,
+    "pagefile_MB": 881.68
+   },
+   "run_s": 0.0,
+   "ticks_per_s": 2395209.6,
+   "tick_ms": {
+    "median": 0.0,
+    "min": 0.0,
+    "p90": 0.0,
+    "max": 0.0
+   },
+   "sampled_peak": {
+    "rss_MB": 499.09,
+    "private_commit_MB": 881.82
+   },
+   "end": {
+    "rss_MB": 499.09,
+    "private_commit_MB": 881.82,
+    "peak_wset_MB": 499.09,
+    "peak_commit_MB": 881.83,
+    "pagefile_MB": 881.82
+   },
+   "device_end": {
+    "nvidia_used_MiB": 186,
+    "nvidia_free_MiB": 15990
+   },
+   "device_delta_used_MiB": 0,
+   "concurrency_end": {
+    "cpu_percent_0.3s": 41.0,
+    "python_proc_count": 8
+   },
+   "allocator": {
+    "max_memory_allocated_MB": 0.0,
+    "max_memory_reserved_MB": 0.0,
+    "cuda_available": true,
+    "is_initialized": false
+   },
+   "five_tuple": {
+    "peak_wset_MB": 499.09,
+    "peak_commit_MB": 881.83,
+    "peak_rss_sampled_MB": 499.09,
+    "device_delta_MiB": 0,
+    "allocator_max_alloc_MB": 0.0
+   }
+  }
+ },
+ "growth_gc_on": {
+  "mode": "gc_on",
+  "N": 2000,
+  "baseline": {
+   "rss_MB": 27.72,
+   "commit_MB": 15.78,
+   "peak_wset_MB": 27.72,
+   "peak_commit_MB": 15.78
+  },
+  "build_s": 11.82,
+  "after_warmup": {
+   "rss_MB": 128.63,
+   "commit_MB": 186.8,
+   "peak_wset_MB": 144.55,
+   "peak_commit_MB": 202.91
+  },
+  "run_s": 101.37,
+  "samples": [
+   {
+    "t": 100,
+    "rss_MB": 149.36,
+    "commit_MB": 198.42,
+    "peak_wset_MB": 165.36,
+    "peak_commit_MB": 214.52
+   },
+   {
+    "t": 200,
+    "rss_MB": 153.72,
+    "commit_MB": 202.54,
+    "peak_wset_MB": 169.72,
+    "peak_commit_MB": 218.64
+   },
+   {
+    "t": 300,
+    "rss_MB": 157.33,
+    "commit_MB": 206.73,
+    "peak_wset_MB": 173.34,
+    "peak_commit_MB": 222.84
+   },
+   {
+    "t": 400,
+    "rss_MB": 162.52,
+    "commit_MB": 211.54,
+    "peak_wset_MB": 178.52,
+    "peak_commit_MB": 227.64
+   },
+   {
+    "t": 500,
+    "rss_MB": 167.12,
+    "commit_MB": 216.81,
+    "peak_wset_MB": 183.12,
+    "peak_commit_MB": 232.9
+   },
+   {
+    "t": 600,
+    "rss_MB": 171.63,
+    "commit_MB": 220.82,
+    "peak_wset_MB": 187.64,
+    "peak_commit_MB": 236.93
+   },
+   {
+    "t": 700,
+    "rss_MB": 175.52,
+    "commit_MB": 224.84,
+    "peak_wset_MB": 191.53,
+    "peak_commit_MB": 240.95
+   },
+   {
+    "t": 800,
+    "rss_MB": 180.88,
+    "commit_MB": 230.88,
+    "peak_wset_MB": 196.89,
+    "peak_commit_MB": 246.98
+   },
+   {
+    "t": 900,
+    "rss_MB": 185.84,
+    "commit_MB": 235.2,
+    "peak_wset_MB": 201.84,
+    "peak_commit_MB": 251.3
+   },
+   {
+    "t": 1000,
+    "rss_MB": 189.34,
+    "commit_MB": 240.72,
+    "peak_wset_MB": 205.34,
+    "peak_commit_MB": 256.81
+   },
+   {
+    "t": 1100,
+    "rss_MB": 194.19,
+    "commit_MB": 245.13,
+    "peak_wset_MB": 210.19,
+    "peak_commit_MB": 261.23
+   },
+   {
+    "t": 1200,
+    "rss_MB": 198.66,
+    "commit_MB": 249.15,
+    "peak_wset_MB": 214.67,
+    "peak_commit_MB": 265.25
+   },
+   {
+    "t": 1300,
+    "rss_MB": 203.71,
+    "commit_MB": 254.67,
+    "peak_wset_MB": 219.72,
+    "peak_commit_MB": 270.78
+   },
+   {
+    "t": 1400,
+    "rss_MB": 208.58,
+    "commit_MB": 259.2,
+    "peak_wset_MB": 224.59,
+    "peak_commit_MB": 275.29
+   },
+   {
+    "t": 1500,
+    "rss_MB": 213.26,
+    "commit_MB": 264.71,
+    "peak_wset_MB": 229.26,
+    "peak_commit_MB": 280.8
+   },
+   {
+    "t": 1600,
+    "rss_MB": 217.93,
+    "commit_MB": 268.73,
+    "peak_wset_MB": 233.93,
+    "peak_commit_MB": 284.83
+   },
+   {
+    "t": 1700,
+    "rss_MB": 222.71,
+    "commit_MB": 273.24,
+    "peak_wset_MB": 238.71,
+    "peak_commit_MB": 289.34
+   },
+   {
+    "t": 1800,
+    "rss_MB": 227.56,
+    "commit_MB": 278.77,
+    "peak_wset_MB": 243.56,
+    "peak_commit_MB": 294.88
+   },
+   {
+    "t": 1900,
+    "rss_MB": 232.53,
+    "commit_MB": 283.13,
+    "peak_wset_MB": 248.54,
+    "peak_commit_MB": 299.23
+   },
+   {
+    "t": 2000,
+    "rss_MB": 237.46,
+    "commit_MB": 288.66,
+    "peak_wset_MB": 253.46,
+    "peak_commit_MB": 304.76
+   }
+  ],
+  "end": {
+   "rss_MB": 237.46,
+   "commit_MB": 288.66,
+   "peak_wset_MB": 253.46,
+   "peak_commit_MB": 304.76
+  },
+  "gc_enabled": true
+ },
+ "verdict_320MB": {
+  "peak_wset_MB": 256.59,
+  "peak_commit_MB": 306.11,
+  "wset_margin_to_320_MB": 63.41,
+  "commit_margin_to_320_MB": 13.89,
+  "commit_utilization_pct": 95.7,
+  "growth_commit_MB_per_tick": 0.04709,
+  "growth_wset_MB_per_tick": 0.04718,
+  "extrapolated_ticks_to_320_commit": 294,
+  "extrapolated_ticks_to_320_wset": 1344
+ },
+ "attribution": {
+  "chain1024_2000_commit": {
+   "total_peak_commit_MB": 306.11,
+   "interpreter_plus_numpy_MB": 16.77,
+   "chain_build_add_MB": 128.52,
+   "warmup_add_MB": 42.56,
+   "run_growth_add_MB": 102.03,
+   "peak_gap_MB": 16.23,
+   "attributed_MB": 289.88,
+   "residual_MB": 16.23,
+   "attributed_pct": 94.7
+  },
+  "torch_chain1024_120_commit": {
+   "total_peak_commit_MB": 1077.88,
+   "torch_import_MB": 881.83,
+   "torch_share_pct": 81.8,
+   "chain_build_add_MB": 129.02,
+   "chain_share_pct": 12.0,
+   "warmup_run_rest_MB": 67.03,
+   "rest_share_pct": 6.2
+  }
+ },
+ "cuda_context": {
+  "baseline_MiB": 183,
+  "level_1_MiB": 324,
+  "delta_1_MiB": 141,
+  "level_2_MiB": 466,
+  "delta_2_MiB": 142,
+  "level_3_MiB": 608,
+  "delta_3_MiB": 142,
+  "after_kill_MiB": 182,
+  "per_context_MiB": 142,
+  "additive": true,
+  "note": "首轮 level_3 采样得 477MiB 为时序假象；复测（每级 8s + 双采样）得 608MiB，线性加性成立。"
+ },
+ "concurrency_declaration": {
+  "state": "会议并发期（蓝队 4 worker 在跑；python_proc_count 8–12，CPU 29–68%）",
+  "rule": "墙钟只报 median/min/p90，不作效率宣称",
+  "nvidia_baseline_MiB": [
+   183,
+   187,
+   190
+  ]
+ },
+ "validity": {
+  "five_tuple_complete": true,
+  "baseline_before_after": true,
+  "threads_locked_1": true,
+  "device_and_allocator_columns_present": true,
+  "sampled_vs_os_peak_agreement": "差值 <2.2%",
+  "two_horizons": [
+   120,
+   2000
+  ],
+  "void_flags": []
+ }
+}

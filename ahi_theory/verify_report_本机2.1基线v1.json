@@ -1,0 +1,74 @@
+{
+  "P1": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "干预效应 4.98 / 对照 0.00 / ECE 0.0351"
+  },
+  "P2": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "接口齐备；切断偏离 5.547（诚实边界：本验证不证明仿真湿件具有体验）"
+  },
+  "P3": {
+    "all_passed": false,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "worst": "span=0.123 G2a=0.878 G2b_diff=+0.951 G1b=5.82 G3_JS=2.103 G4=0.923 G5=4/4 G6=0.0066"
+  },
+  "P4": {
+    "all_passed": false,
+    "per_seed": [
+      true,
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "worst": "Phi*=8.3418(代理,非Φ) O-info差=0.252 zz差=0.760"
+  },
+  "P5": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "F_max=0.801 暗室上升=+0.1499 dL=1.3425"
+  },
+  "P6": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "kappa=0.600 迟滞=1.000 MI=+0.0027 跨分支R2=-28.465"
+  }
+}

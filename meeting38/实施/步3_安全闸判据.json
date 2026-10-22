@@ -1,0 +1,171 @@
+{
+  "S1放行": {
+    "route": "S1",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "正常放行→最高分候选",
+        "value": "E1",
+        "threshold": "E1",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "焦点已写回视觉槽",
+        "value": "E1",
+        "threshold": "E1",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S2控件危词": {
+    "route": "S2",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "危词候选被跳过→改用下一候选",
+        "value": "E2",
+        "threshold": "E2",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "安全闸留痕入台账",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "计数 控件危词=1",
+        "value": 1,
+        "threshold": "==1",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S3全否不出招": {
+    "route": "S3",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "候选全否→焦点 None",
+        "value": null,
+        "threshold": "None",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "拒拦标志置位",
+        "value": true,
+        "threshold": "真",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "不出招且不误报（队列空）",
+        "value": 0,
+        "threshold": "==0",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S4整窗回避": {
+    "route": "S4",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "整窗回避→焦点 None",
+        "value": null,
+        "threshold": "None",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "零点查（快通道止损）",
+        "value": 0,
+        "threshold": "==0",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "计数 整窗回避=1 且留痕",
+        "value": "1/True",
+        "threshold": "==1/真",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S5异常退化": {
+    "route": "S5",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "事实源异常→优雅退化放行",
+        "value": "E1",
+        "threshold": "E1（不崩）",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S6角区回避": {
+    "route": "S6",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "角区回避保留",
+        "value": "E1",
+        "threshold": "E1",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S7探针限流": {
+    "route": "S7",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "每次出招点查上限",
+        "value": 3,
+        "threshold": "≤3（实测）",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S8默认源优雅性": {
+    "route": "S8",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "坏输入→空串；状态可读",
+        "value": "a='' b=''",
+        "threshold": "空串/dict",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  },
+  "S9统计": {
+    "route": "S9",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "统计含安全闸计数",
+        "value": {
+          "整窗回避": 0,
+          "控件危词": 0
+        },
+        "threshold": "dict",
+        "passed": true,
+        "note": ""
+      }
+    ]
+  }
+}

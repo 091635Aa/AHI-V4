@@ -1,0 +1,594 @@
+{
+ "manifest": "meeting59 / 洛天依第三方参考音频 v1",
+ "generated_at": "2026-10-19T12:53:47+08:00",
+ "written_by": "refs-web (team meeting59)",
+ "goal": "供 meeting59 声线拟合器估计 14 维音色档案的第三方参考；只做声学参数估计。",
+ "authorization": {
+  "scope": "仅用于本机声学参数估计（F0/LTAS/共振峰/倾斜/HNR/语速等统计）；参考音频不再分发、不再上传、不用于训练外部模型、不做真声克隆。",
+  "source_terms": "B 站第三方公开视频；版权归原作者/权利方；本目录仅保存分析用小片段，未主张任何权利。",
+  "prohibited": "不得把片段重新发布/商用；不得用于 RVC/TTS 等外挂模型训练或推理（本项目 C10）。"
+ },
+ "processing_chain": [
+  "1) B 站 API: x/web-interface/view 取 aid/cid/标题/UP/日期；x/player/wbi/playurl(fnval=16) 取 dash audio（请求头 UA + Referer=https://www.bilibili.com，wbi 签名）",
+  "2) 下载最高码率 dash audio 流为 raw_*.m4s（不转码、不改内容）",
+  "3) ffmpeg -ac 1 -ar 16000 -c:a pcm_s16le 解码为 16k 单声道",
+  "4) scipy 核验: NSDF(McLeod) F0 跟踪 / 帧能量 / 7 带 LTAS / 静音率 / 停顿段稳态谱 / 包络衰减 / 立体声侧信号(仅源A)",
+  "5) 切段: 能量+静音率打分选窗 → 去直流 + 5ms 淡入淡出 → s16（不归一化、不降噪）",
+  "6) sha256 登记 + 片段统计落盘"
+ ],
+ "sources": [
+  {
+   "source_id": "L-A",
+   "kind": "第三方测试样本（含 BGM，不用于声线拟合）",
+   "bvid": "BV1qKJb68ESn",
+   "aid": null,
+   "cid": 42792650838,
+   "page": 1,
+   "url": "https://www.bilibili.com/video/BV1qKJb68ESn",
+   "title": "天依只想抱抱你，夸夸你，辛苦啦！",
+   "author": "洛天依（官方认证账号）",
+   "owner_mid": 36081646,
+   "pubdate": "2026-10-16 19:32:15 +08:00",
+   "duration_s": 72,
+   "dimension": "1080x1920（竖屏）",
+   "tags": [
+    "洛天依",
+    "虚拟歌手",
+    "治愈",
+    "Vsinger",
+    "live2D",
+    "轻哄",
+    "Vsinger创作激励计划"
+   ],
+   "desc": "最近也辛苦啦，要记得好好休息哦~",
+   "view_at_dl": 186704,
+   "audio_stream": "dash audio id=30280, aac 44.1kHz stereo",
+   "raw_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/raw_30280.m4s",
+    "size_bytes": 1516686,
+    "sha256": "4d9cd685e152524fdc5a9edaa9096c3c16e68e58581c3099450a8f595a03888e"
+   },
+   "decode_cmd": "ffmpeg -i raw_30280.m4s -ac 1 -ar 16000 -c:a pcm_s16le ref_洛天依_16k.wav（由 lead 执行，本目录核验）",
+   "native_16k_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_16k.wav",
+    "size_bytes": 2294582,
+    "sha256": "71b04d082aad1cab579588432f4ac451dbe4067a51f6c2190cc2bcdea4206df6"
+   },
+   "acoustic": {
+    "file": "ref_洛天依_16k.wav",
+    "size_bytes": 2294582,
+    "sample_rate": 16000,
+    "duration_s": 71.703,
+    "n_samples": 1147252,
+    "sha256": "71b04d082aad1cab579588432f4ac451dbe4067a51f6c2190cc2bcdea4206df6",
+    "peak_dbfs": -17.56,
+    "rms_dbfs": -36.46,
+    "silence_lt_-55db_frac": 0.098,
+    "voiced_frac": 0.904,
+    "periodicity_median": 0.847,
+    "f0_hz_p5_p50_p95": [
+     70.2,
+     132.8,
+     527.0
+    ],
+    "f0_semitone_span_p5_p95": 34.89,
+    "frames_df0_st_median": 0.127,
+    "ltas_7band_db": {
+     "100-300": 2.31,
+     "300-600": 0.97,
+     "600-1200": -2.32,
+     "1200-2400": -7.11,
+     "2400-4000": -16.17,
+     "4000-6000": -21.36,
+     "6000-8000": -30.38
+    },
+    "ltas_density_7band_db": {
+     "100-300": -2.17,
+     "300-600": -0.05,
+     "600-1200": -6.53,
+     "1200-2400": -12.25,
+     "2400-4000": -23.37,
+     "4000-6000": -24.66,
+     "6000-8000": -27.48
+    },
+    "ltas_slope_db_per_oct": -5.76
+   },
+   "verdict": {
+    "speech_or_song": "【推断·中】说话/轻哄式念白（非歌唱）：限带 280–700 Hz F0 跟踪显示浊音段中位 0.10 s、最长 0.67 s、帧间 |ΔF0| 中位 0.14 st，接近本目录干净“说话”样本（0.15 s / 1.35 s / 0.16 st），明显不同于干净“清唱”样本（0.29 s / 3.34 s / 0.06 st）",
+    "bgm": "【实测】有：停顿段仍有约 −58 dBFS 稳态能量、句间未到数字静音；60–200 Hz 存在单一窄带峰（中位 110 Hz，p10–p90 90–160 Hz，峰/均 ≈171×）→ 低频伴奏/底噪；立体声侧信号在停顿帧 side≈mid（−0.55 dB）→ 停顿底噪为单声道相关噪声（非立体声伴奏）",
+    "reverb": "【实测】包络衰减斜率中位 23 dB/s、env 自相关 0.05 s=0.82/0.1 s=0.58 → 有可测的混响/拖尾（非干声）",
+    "f0_note": "【实测】全带 F0 跟踪不可靠（低频伴奏占优，NSDF 锁到 ~133 Hz）；手工谱峰点查显示人声谐波系列 F0 ≈ 375–562 Hz（t=2.75/5.0 s 等 5 帧）；限带 280–700 Hz 后 F0 中位 409 Hz",
+    "use": "仅作第三方对照/测试样本；不参与声线拟合"
+   }
+  },
+  {
+   "source_id": "L-B",
+   "kind": "干净人声·说话（拟合用）",
+   "bvid": "BV1aJ4m1475U",
+   "aid": 1250235372,
+   "cid": 1428303502,
+   "page": 1,
+   "url": "https://www.bilibili.com/video/BV1aJ4m1475U",
+   "title": "洛天依送给锦依卫的语音",
+   "author": "口亨口亨（第三方 UP 主，非官方账号）",
+   "owner_mid": 1758025780,
+   "pubdate": "2024-02-03 02:38:51 +08:00",
+   "duration_s": 77,
+   "dimension": "720x720",
+   "tags": null,
+   "desc": "-",
+   "audio_stream": "dash audio id=30232, aac 78.9 kbps",
+   "raw_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/raw_语音_口亨口亨.m4s",
+    "size_bytes": 756857,
+    "sha256": "a6e712fa0f334c69611b383f8b243cda031178bba7ef69fdbd1c94e1ffbac895"
+   },
+   "decode_cmd": "ffmpeg -i raw_语音_口亨口亨.m4s -ac 1 -ar 16000 -c:a pcm_s16le 核验_语音_16k.wav",
+   "native_16k_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/核验_语音_16k.wav",
+    "size_bytes": 2453592,
+    "sha256": "247f827c3042bfdec418c2b0fdbed310299c9bbccef72c67eda946dc1ff8b7d2"
+   },
+   "acoustic": {
+    "file": "核验_语音_16k.wav",
+    "size_bytes": 2453592,
+    "sample_rate": 16000,
+    "duration_s": 76.672,
+    "n_samples": 1226757,
+    "sha256": "247f827c3042bfdec418c2b0fdbed310299c9bbccef72c67eda946dc1ff8b7d2",
+    "peak_dbfs": -3.91,
+    "rms_dbfs": -25.79,
+    "silence_lt_-55db_frac": 0.324,
+    "voiced_frac": 0.652,
+    "periodicity_median": 0.96,
+    "f0_hz_p5_p50_p95": [
+     220.8,
+     346.8,
+     883.2
+    ],
+    "f0_semitone_span_p5_p95": 24.0,
+    "frames_df0_st_median": 0.192,
+    "ltas_7band_db": {
+     "100-300": -22.33,
+     "300-600": -12.22,
+     "600-1200": -12.7,
+     "1200-2400": -18.62,
+     "2400-4000": -24.27,
+     "4000-6000": -22.62,
+     "6000-8000": -30.2
+    },
+    "ltas_density_7band_db": {
+     "100-300": 6.27,
+     "300-600": 9.52,
+     "600-1200": 7.67,
+     "1200-2400": -0.96,
+     "2400-4000": -12.86,
+     "4000-6000": -16.16,
+     "6000-8000": -20.29
+    },
+    "ltas_slope_db_per_oct": -6.03
+   },
+   "verdict": {
+    "speech_or_song": "【实测】说话：短句 burst（median 浊音段 0.19s、最长 1.39s）+ 句间真静音；F0 中位 346.8 Hz",
+    "bgm": "【实测】无：停顿段 RMS 约 −95 dBFS（近数字静音），quiet/active 带能量比 −70.6 dB；无稳态窄峰",
+    "reverb": "【实测】包络衰减斜率中位 13 dB/s（p25 −60 dB/s → 大量硬切），无显著长拖尾",
+    "identity_note": "【未测】第三方上传的语音/语音包，声音身份由 UP 主标题声明；未做声纹身份认证",
+    "use": "干净人声参考（说话），供 F0/LTAS/共振峰拟合"
+   }
+  },
+  {
+   "source_id": "L-C",
+   "kind": "干净人声·歌声/清唱干声（拟合用）",
+   "bvid": "BV1Wf4y1F711",
+   "aid": 380889227,
+   "cid": 493504440,
+   "page": 1,
+   "url": "https://www.bilibili.com/video/BV1Wf4y1F711",
+   "title": "【洛天依AI干声提取】一梦千宵",
+   "author": "塔赴P（第三方 UP 主）",
+   "owner_mid": 258080618,
+   "pubdate": "2022-01-27 07:22:25 +08:00",
+   "duration_s": 256,
+   "dimension": "1920x1080",
+   "tags": null,
+   "desc": "本家 BV1QL4y147wM；歌手：洛天依；…干声提取（UP 自述：消得可能不是很干净）",
+   "audio_stream": "dash audio id=30280, aac 321.6 kbps",
+   "raw_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/raw_干声_一梦千宵.m4s",
+    "size_bytes": 10272825,
+    "sha256": "89b4305e827c225c2b1a971bba8c227e9cda2cab1f68303204abea18d0ae4884"
+   },
+   "decode_cmd": "ffmpeg -i raw_干声_一梦千宵.m4s -ac 1 -ar 16000 -c:a pcm_s16le 核验_干声_16k.wav",
+   "native_16k_file": {
+    "path": "03_AHI/AHI4/meeting59/素材/洛天依/核验_干声_16k.wav",
+    "size_bytes": 8177960,
+    "sha256": "2f5b2b250c3b56becb0c639cc13a778f56b7b4eb4a1ecc16d0105d3255e41ebe"
+   },
+   "acoustic": {
+    "file": "核验_干声_16k.wav",
+    "size_bytes": 8177960,
+    "sample_rate": 16000,
+    "duration_s": 255.559,
+    "n_samples": 4088941,
+    "sha256": "2f5b2b250c3b56becb0c639cc13a778f56b7b4eb4a1ecc16d0105d3255e41ebe",
+    "peak_dbfs": -2.04,
+    "rms_dbfs": -18.11,
+    "silence_lt_-55db_frac": 0.234,
+    "voiced_frac": 0.711,
+    "periodicity_median": 0.947,
+    "f0_hz_p5_p50_p95": [
+     246.3,
+     371.0,
+     661.0
+    ],
+    "f0_semitone_span_p5_p95": 17.09,
+    "frames_df0_st_median": 0.067,
+    "ltas_7band_db": {
+     "100-300": -53.29,
+     "300-600": -30.18,
+     "600-1200": -27.14,
+     "1200-2400": -33.73,
+     "2400-4000": -39.47,
+     "4000-6000": -38.07,
+     "6000-8000": -51.31
+    },
+    "ltas_density_7band_db": {
+     "100-300": 10.76,
+     "300-600": 17.32,
+     "600-1200": 15.22,
+     "1200-2400": 7.53,
+     "2400-4000": -1.16,
+     "4000-6000": -3.37,
+     "6000-8000": -7.77
+    },
+    "ltas_slope_db_per_oct": -4.46
+   },
+   "verdict": {
+    "speech_or_song": "【实测】歌声：浊音占 71%、最长连续浊音 7.26 s、句内 F0 半音级稳定（帧间 |ΔF0| 中位 0.07 st）、谱图见颤音",
+    "bgm": "【实测】无人声外 BGM：停顿段为数字静音（−240 dBFS，样本恒为 0）；但为第三方分离提取，非官方干声，可能有残留分离伪影（UP 自述）",
+    "reverb": "【实测】衰减斜率中位 40 dB/s（干声特征）",
+    "identity_note": "【实测/来源声明】本家为洛天依演唱；分离提取为第三方处理，非官方 dry vocal",
+    "use": "干净人声参考（歌声），供 F0/LTAS/共振峰拟合"
+   }
+  }
+ ],
+ "segments": [
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_语音_01.wav",
+   "source_id": "L-B",
+   "t0_s_in_source": 8.09,
+   "t1_s_in_source": 12.09,
+   "duration_s": 4.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 128044,
+   "sha256": "ced524e163eeb8bf7e02d81292b35f629e70e2da3a6ebb0c25658b21e9bb31bf",
+   "use_tag": "说话/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_语音_01.wav",
+    "size_bytes": 128044,
+    "sample_rate": 16000,
+    "duration_s": 4.0,
+    "n_samples": 64000,
+    "sha256": "ced524e163eeb8bf7e02d81292b35f629e70e2da3a6ebb0c25658b21e9bb31bf",
+    "peak_dbfs": -9.16,
+    "rms_dbfs": -25.09,
+    "silence_lt_-55db_frac": 0.091,
+    "voiced_frac": 0.776,
+    "periodicity_median": 0.966,
+    "f0_hz_p5_p50_p95": [
+     270.6,
+     330.8,
+     465.3
+    ],
+    "f0_semitone_span_p5_p95": 9.38,
+    "frames_df0_st_median": 0.182,
+    "ltas_7band_db": {
+     "100-300": -3.35,
+     "300-600": 10.23,
+     "600-1200": 8.51,
+     "1200-2400": -0.74,
+     "2400-4000": -5.72,
+     "4000-6000": -2.93,
+     "6000-8000": -11.52
+    },
+    "ltas_density_7band_db": {
+     "100-300": 6.03,
+     "300-600": 10.63,
+     "600-1200": 9.01,
+     "1200-2400": -5.02,
+     "2400-4000": -13.44,
+     "4000-6000": -16.88,
+     "6000-8000": -21.76
+    },
+    "ltas_slope_db_per_oct": -6.44
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "选中依据: 4s 窗 activity 0.94、段内静音 9%"
+  },
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_语音_02.wav",
+   "source_id": "L-B",
+   "t0_s_in_source": 12.83,
+   "t1_s_in_source": 16.83,
+   "duration_s": 4.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 128044,
+   "sha256": "fddf14c6011f6d5c88e1cbe808b66662f0e0f7c30bf75821f6094770a004e887",
+   "use_tag": "说话/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_语音_02.wav",
+    "size_bytes": 128044,
+    "sample_rate": 16000,
+    "duration_s": 4.0,
+    "n_samples": 64000,
+    "sha256": "fddf14c6011f6d5c88e1cbe808b66662f0e0f7c30bf75821f6094770a004e887",
+    "peak_dbfs": -10.96,
+    "rms_dbfs": -25.79,
+    "silence_lt_-55db_frac": 0.103,
+    "voiced_frac": 0.819,
+    "periodicity_median": 0.975,
+    "f0_hz_p5_p50_p95": [
+     234.8,
+     316.8,
+     458.2
+    ],
+    "f0_semitone_span_p5_p95": 11.58,
+    "frames_df0_st_median": 0.186,
+    "ltas_7band_db": {
+     "100-300": 1.87,
+     "300-600": 10.7,
+     "600-1200": 7.88,
+     "1200-2400": -3.77,
+     "2400-4000": -6.11,
+     "4000-6000": -4.82,
+     "6000-8000": -14.0
+    },
+    "ltas_density_7band_db": {
+     "100-300": 9.32,
+     "300-600": 9.74,
+     "600-1200": 7.33,
+     "1200-2400": -5.7,
+     "2400-4000": -14.9,
+     "4000-6000": -16.78,
+     "6000-8000": -18.29
+    },
+    "ltas_slope_db_per_oct": -6.47
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "activity 0.92、段内静音 10%"
+  },
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_语音_03.wav",
+   "source_id": "L-B",
+   "t0_s_in_source": 61.45,
+   "t1_s_in_source": 65.45,
+   "duration_s": 4.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 128044,
+   "sha256": "d2319aadb1e5326ee0cd480f77b9460a78cf14f68a64422859fe01533588b24f",
+   "use_tag": "说话/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_语音_03.wav",
+    "size_bytes": 128044,
+    "sample_rate": 16000,
+    "duration_s": 4.0,
+    "n_samples": 64000,
+    "sha256": "d2319aadb1e5326ee0cd480f77b9460a78cf14f68a64422859fe01533588b24f",
+    "peak_dbfs": -9.54,
+    "rms_dbfs": -27.47,
+    "silence_lt_-55db_frac": 0.116,
+    "voiced_frac": 0.801,
+    "periodicity_median": 0.963,
+    "f0_hz_p5_p50_p95": [
+     211.1,
+     317.1,
+     550.2
+    ],
+    "f0_semitone_span_p5_p95": 16.59,
+    "frames_df0_st_median": 0.239,
+    "ltas_7band_db": {
+     "100-300": -0.89,
+     "300-600": 7.89,
+     "600-1200": 4.84,
+     "1200-2400": -6.26,
+     "2400-4000": -12.35,
+     "4000-6000": -10.35,
+     "6000-8000": -18.69
+    },
+    "ltas_density_7band_db": {
+     "100-300": 5.46,
+     "300-600": 8.54,
+     "600-1200": 6.13,
+     "1200-2400": -10.77,
+     "2400-4000": -10.95,
+     "4000-6000": -16.78,
+     "6000-8000": -20.66
+    },
+    "ltas_slope_db_per_oct": -5.91
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "activity 0.90、段内静音 12%"
+  },
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_清唱_01.wav",
+   "source_id": "L-C",
+   "t0_s_in_source": 31.17,
+   "t1_s_in_source": 38.17,
+   "duration_s": 7.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 224044,
+   "sha256": "8c306540e1611cfadbdb8c0f7c991f62577e1b47755bf90a6ee6318b5c735bc2",
+   "use_tag": "歌声/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_清唱_01.wav",
+    "size_bytes": 224044,
+    "sample_rate": 16000,
+    "duration_s": 7.0,
+    "n_samples": 112000,
+    "sha256": "8c306540e1611cfadbdb8c0f7c991f62577e1b47755bf90a6ee6318b5c735bc2",
+    "peak_dbfs": -3.55,
+    "rms_dbfs": -16.1,
+    "silence_lt_-55db_frac": 0.0,
+    "voiced_frac": 0.884,
+    "periodicity_median": 0.967,
+    "f0_hz_p5_p50_p95": [
+     245.7,
+     393.7,
+     439.2
+    ],
+    "f0_semitone_span_p5_p95": 10.06,
+    "frames_df0_st_median": 0.07,
+    "ltas_7band_db": {
+     "100-300": -8.02,
+     "300-600": 25.36,
+     "600-1200": 26.59,
+     "1200-2400": 20.13,
+     "2400-4000": 12.43,
+     "4000-6000": 14.56,
+     "6000-8000": 0.57
+    },
+    "ltas_density_7band_db": {
+     "100-300": 16.24,
+     "300-600": 19.17,
+     "600-1200": 17.02,
+     "1200-2400": 8.8,
+     "2400-4000": 0.69,
+     "4000-6000": -1.25,
+     "6000-8000": -5.95
+    },
+    "ltas_slope_db_per_oct": -4.94
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "7s 纯浊音窗（段内静音 0%）"
+  },
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_清唱_02.wav",
+   "source_id": "L-C",
+   "t0_s_in_source": 82.77,
+   "t1_s_in_source": 89.77,
+   "duration_s": 7.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 224044,
+   "sha256": "1aacb05b15e4e1fccb8a4f671b7ef8be6634f2ba54bed241f6def35753aeb6a8",
+   "use_tag": "歌声/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_清唱_02.wav",
+    "size_bytes": 224044,
+    "sample_rate": 16000,
+    "duration_s": 7.0,
+    "n_samples": 112000,
+    "sha256": "1aacb05b15e4e1fccb8a4f671b7ef8be6634f2ba54bed241f6def35753aeb6a8",
+    "peak_dbfs": -2.65,
+    "rms_dbfs": -15.22,
+    "silence_lt_-55db_frac": 0.0,
+    "voiced_frac": 0.938,
+    "periodicity_median": 0.93,
+    "f0_hz_p5_p50_p95": [
+     241.3,
+     368.0,
+     507.8
+    ],
+    "f0_semitone_span_p5_p95": 12.88,
+    "frames_df0_st_median": 0.072,
+    "ltas_7band_db": {
+     "100-300": 3.96,
+     "300-600": 27.86,
+     "600-1200": 27.66,
+     "1200-2400": 11.89,
+     "2400-4000": 12.64,
+     "4000-6000": 17.2,
+     "6000-8000": -3.28
+    },
+    "ltas_density_7band_db": {
+     "100-300": 13.68,
+     "300-600": 20.81,
+     "600-1200": 18.36,
+     "1200-2400": 6.69,
+     "2400-4000": 2.35,
+     "4000-6000": 1.41,
+     "6000-8000": -7.5
+    },
+    "ltas_slope_db_per_oct": -4.65
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "7s 纯浊音窗（段内静音 0%）"
+  },
+  {
+   "file": "03_AHI/AHI4/meeting59/素材/洛天依/ref_洛天依_清唱_03.wav",
+   "source_id": "L-C",
+   "t0_s_in_source": 218.04,
+   "t1_s_in_source": 225.04,
+   "duration_s": 7.0,
+   "sample_rate": 16000,
+   "channels": 1,
+   "sample_format": "s16",
+   "size_bytes": 224044,
+   "sha256": "9f29fc82a7ad356c0a76aacd3c7d6462254e647ca3768cf3d837e70408b08753",
+   "use_tag": "歌声/干净人声",
+   "acoustic": {
+    "file": "ref_洛天依_清唱_03.wav",
+    "size_bytes": 224044,
+    "sample_rate": 16000,
+    "duration_s": 7.0,
+    "n_samples": 112000,
+    "sha256": "9f29fc82a7ad356c0a76aacd3c7d6462254e647ca3768cf3d837e70408b08753",
+    "peak_dbfs": -4.19,
+    "rms_dbfs": -15.07,
+    "silence_lt_-55db_frac": 0.0,
+    "voiced_frac": 0.971,
+    "periodicity_median": 0.96,
+    "f0_hz_p5_p50_p95": [
+     264.9,
+     394.4,
+     547.5
+    ],
+    "f0_semitone_span_p5_p95": 12.57,
+    "frames_df0_st_median": 0.075,
+    "ltas_7band_db": {
+     "100-300": -11.18,
+     "300-600": 29.47,
+     "600-1200": 26.56,
+     "1200-2400": 11.7,
+     "2400-4000": 10.01,
+     "4000-6000": 12.39,
+     "6000-8000": -4.08
+    },
+    "ltas_density_7band_db": {
+     "100-300": 13.23,
+     "300-600": 21.37,
+     "600-1200": 18.65,
+     "1200-2400": 5.45,
+     "2400-4000": -1.59,
+     "4000-6000": -1.56,
+     "6000-8000": -8.66
+    },
+    "ltas_slope_db_per_oct": -5.24
+   },
+   "processing": "scipy: 去直流均值 + 5ms 淡入淡出 + s16 量化(未归一化增益: 峰值均 <1.0，无削波)；无降噪/无增强/无TTS/无RVC",
+   "note": "7s 纯浊音窗（段内静音 0%）"
+  }
+ ],
+ "totals": {
+  "clean_ref_files": 6,
+  "clean_ref_duration_s": 33.0,
+  "with_bgm_test_sample_duration_s": 71.703,
+  "note": "干净人声合计 33.0s（要求 20–50s）；另有 1 条含 BGM 的 71.7s 第三方测试样本单独登记，不参与拟合。"
+ },
+ "unverified": [
+  "未做人耳盲听 / MOS 主观评价",
+  "未做声纹身份认证（声音身份依据官方账号或 UP 主声明 + 谱学特征一致性）",
+  "源 A（含 BGM）的 F0 未能可靠估计（伴奏低频占优）；其说话/歌声判断为推断",
+  "源 C 为第三方分离干声，可能存在分离伪影（UP 主自述），未做伪影量化",
+  "未测其它平台（YouTube/网易云等）备选源"
+ ]
+}

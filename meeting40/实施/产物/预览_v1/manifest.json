@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\AHI3_基础任务验收记录.docx",
+  "sourceSha256": "7b8da65144246037fdbb90859001225409d6b2eac8fab6abb2bbf05dea1d6776",
+  "dpi": 120,
+  "pageCount": 1,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v1\\page-0001.png",
+      "width": 993,
+      "height": 1404,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 126212
+    }
+  ],
+  "missingFonts": []
+}

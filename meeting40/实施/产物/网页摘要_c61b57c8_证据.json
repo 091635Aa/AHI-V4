@@ -1,0 +1,31 @@
+{
+ "任务": "做文档",
+ "主题": "网页摘要：搜狐 和另外 2 个页面 - 个人 - Microsoft Edge",
+ "产物": {
+  "docx": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_c61b57c8.docx",
+  "md": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_c61b57c8.md"
+ },
+ "docx": {
+  "字节": 2434,
+  "sha256": "9fddd929b8f6e461e44db6714d88e4fdf616c352e97786e161ae3062340aaa3d",
+  "段数": 31,
+  "部件s": [
+   "[Content_Types].xml",
+   "_rels/.rels",
+   "word/_rels/document.xml.rels",
+   "word/document.xml",
+   "word/styles.xml"
+  ]
+ },
+ "段落数": 31,
+ "条目数": 12,
+ "检索条数": 0,
+ "检索": [],
+ "素材来源": "记忆检索+给定素材",
+ "md_sha256": "4835b031f2775b86e606167e2375ca509675a86af301cf9d5f0d2d14f2cda166",
+ "docx文本条数": 31,
+ "落盘": {
+  "docx存在": true,
+  "md存在": true
+ }
+}

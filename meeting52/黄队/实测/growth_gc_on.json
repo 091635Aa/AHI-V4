@@ -1,0 +1,167 @@
+{
+ "mode": "gc_on",
+ "N": 2000,
+ "baseline": {
+  "rss_MB": 27.72,
+  "commit_MB": 15.78,
+  "peak_wset_MB": 27.72,
+  "peak_commit_MB": 15.78
+ },
+ "build_s": 11.82,
+ "after_warmup": {
+  "rss_MB": 128.63,
+  "commit_MB": 186.8,
+  "peak_wset_MB": 144.55,
+  "peak_commit_MB": 202.91
+ },
+ "run_s": 101.37,
+ "samples": [
+  {
+   "t": 100,
+   "rss_MB": 149.36,
+   "commit_MB": 198.42,
+   "peak_wset_MB": 165.36,
+   "peak_commit_MB": 214.52
+  },
+  {
+   "t": 200,
+   "rss_MB": 153.72,
+   "commit_MB": 202.54,
+   "peak_wset_MB": 169.72,
+   "peak_commit_MB": 218.64
+  },
+  {
+   "t": 300,
+   "rss_MB": 157.33,
+   "commit_MB": 206.73,
+   "peak_wset_MB": 173.34,
+   "peak_commit_MB": 222.84
+  },
+  {
+   "t": 400,
+   "rss_MB": 162.52,
+   "commit_MB": 211.54,
+   "peak_wset_MB": 178.52,
+   "peak_commit_MB": 227.64
+  },
+  {
+   "t": 500,
+   "rss_MB": 167.12,
+   "commit_MB": 216.81,
+   "peak_wset_MB": 183.12,
+   "peak_commit_MB": 232.9
+  },
+  {
+   "t": 600,
+   "rss_MB": 171.63,
+   "commit_MB": 220.82,
+   "peak_wset_MB": 187.64,
+   "peak_commit_MB": 236.93
+  },
+  {
+   "t": 700,
+   "rss_MB": 175.52,
+   "commit_MB": 224.84,
+   "peak_wset_MB": 191.53,
+   "peak_commit_MB": 240.95
+  },
+  {
+   "t": 800,
+   "rss_MB": 180.88,
+   "commit_MB": 230.88,
+   "peak_wset_MB": 196.89,
+   "peak_commit_MB": 246.98
+  },
+  {
+   "t": 900,
+   "rss_MB": 185.84,
+   "commit_MB": 235.2,
+   "peak_wset_MB": 201.84,
+   "peak_commit_MB": 251.3
+  },
+  {
+   "t": 1000,
+   "rss_MB": 189.34,
+   "commit_MB": 240.72,
+   "peak_wset_MB": 205.34,
+   "peak_commit_MB": 256.81
+  },
+  {
+   "t": 1100,
+   "rss_MB": 194.19,
+   "commit_MB": 245.13,
+   "peak_wset_MB": 210.19,
+   "peak_commit_MB": 261.23
+  },
+  {
+   "t": 1200,
+   "rss_MB": 198.66,
+   "commit_MB": 249.15,
+   "peak_wset_MB": 214.67,
+   "peak_commit_MB": 265.25
+  },
+  {
+   "t": 1300,
+   "rss_MB": 203.71,
+   "commit_MB": 254.67,
+   "peak_wset_MB": 219.72,
+   "peak_commit_MB": 270.78
+  },
+  {
+   "t": 1400,
+   "rss_MB": 208.58,
+   "commit_MB": 259.2,
+   "peak_wset_MB": 224.59,
+   "peak_commit_MB": 275.29
+  },
+  {
+   "t": 1500,
+   "rss_MB": 213.26,
+   "commit_MB": 264.71,
+   "peak_wset_MB": 229.26,
+   "peak_commit_MB": 280.8
+  },
+  {
+   "t": 1600,
+   "rss_MB": 217.93,
+   "commit_MB": 268.73,
+   "peak_wset_MB": 233.93,
+   "peak_commit_MB": 284.83
+  },
+  {
+   "t": 1700,
+   "rss_MB": 222.71,
+   "commit_MB": 273.24,
+   "peak_wset_MB": 238.71,
+   "peak_commit_MB": 289.34
+  },
+  {
+   "t": 1800,
+   "rss_MB": 227.56,
+   "commit_MB": 278.77,
+   "peak_wset_MB": 243.56,
+   "peak_commit_MB": 294.88
+  },
+  {
+   "t": 1900,
+   "rss_MB": 232.53,
+   "commit_MB": 283.13,
+   "peak_wset_MB": 248.54,
+   "peak_commit_MB": 299.23
+  },
+  {
+   "t": 2000,
+   "rss_MB": 237.46,
+   "commit_MB": 288.66,
+   "peak_wset_MB": 253.46,
+   "peak_commit_MB": 304.76
+  }
+ ],
+ "end": {
+  "rss_MB": 237.46,
+  "commit_MB": 288.66,
+  "peak_wset_MB": 253.46,
+  "peak_commit_MB": 304.76
+ },
+ "gc_enabled": true
+}

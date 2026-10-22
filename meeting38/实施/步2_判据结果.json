@@ -1,0 +1,93 @@
+{
+  "S2C1": {
+    "route": "S2-C1 容量(重钉)",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "live 束区域分类(20 情绪)",
+        "value": "见 S2-R 20/20",
+        "threshold": "≥19/20",
+        "passed": true,
+        "note": "live 束真实用途=粗读广播（S2-R 已测）"
+      },
+      {
+        "name": "平铺束 N=8 精确档(能力包络,如实登记)",
+        "value": 0.7875,
+        "threshold": "登记不设门",
+        "passed": true,
+        "note": "±2档=0.8650；1/√N 律证伪 05 §6.3 的 0.9966"
+      },
+      {
+        "name": "库路径 top-1 @300 情绪态",
+        "value": 1.0,
+        "threshold": "≥0.99",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "库路径档位精确读",
+        "value": 1.0,
+        "threshold": "=1.0(元数据)",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 2.87
+  },
+  "S2R": {
+    "route": "S2-R 区域判别",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "非临界对最小 cos 距",
+        "value": 0.2031,
+        "threshold": "≥0.06(≈2σ)",
+        "passed": true,
+        "note": ""
+      },
+      {
+        "name": "临界对最小 cos 距(羞耻/内疚等)",
+        "value": 0.2109,
+        "threshold": "≥0.03(1σ临界,如实登记)",
+        "passed": true,
+        "note": "05 §9.2：单轴对天然临界；若<0.03 ⇒ 需加 O/B 第 9 轴"
+      },
+      {
+        "name": "最近区域分类 20/20",
+        "value": "20/20",
+        "threshold": "≥19/20",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.2
+  },
+  "S2D": {
+    "route": "S2-D 确定性",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "双实例编码哈希",
+        "value": "b41c1eb01bbc19c4",
+        "threshold": "==b41c1eb01bbc19c4",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.17
+  },
+  "S2T": {
+    "route": "S2-T 延迟",
+    "passed": true,
+    "criteria": [
+      {
+        "name": "编码+回读 p95(8 情感轴)",
+        "value": 8.61,
+        "threshold": "≤15ms",
+        "passed": true,
+        "note": ""
+      }
+    ],
+    "secs": 0.34
+  }
+}

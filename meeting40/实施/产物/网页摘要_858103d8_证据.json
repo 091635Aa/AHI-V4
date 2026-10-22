@@ -1,0 +1,31 @@
+{
+ "任务": "做文档",
+ "主题": "网页摘要（本地页通路）",
+ "产物": {
+  "docx": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_858103d8.docx",
+  "md": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\网页摘要_858103d8.md"
+ },
+ "docx": {
+  "字节": 2260,
+  "sha256": "8553a9f4fba4e70d749d52fb7949c3ba8c3ecdd10544ab994e85a69b24d78fdd",
+  "段数": 13,
+  "部件s": [
+   "[Content_Types].xml",
+   "_rels/.rels",
+   "word/_rels/document.xml.rels",
+   "word/document.xml",
+   "word/styles.xml"
+  ]
+ },
+ "段落数": 13,
+ "条目数": 3,
+ "检索条数": 0,
+ "检索": [],
+ "素材来源": "记忆检索+给定素材",
+ "md_sha256": "949cf039e1ec9c954dbe10ef59f00fb656269df42bca164c1b7595edb19ab575",
+ "docx文本条数": 13,
+ "落盘": {
+  "docx存在": true,
+  "md存在": true
+ }
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\AHI3.0_图文报告_v3.0.docx",
+  "sourceSha256": "8f8e7604008c1378fbeac960ac25c2b8ffe4bca34e9b25c7564769d83c479999",
+  "dpi": 110,
+  "pageCount": 9,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0001.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 191116
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0002.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 76186
+    },
+    {
+      "index": 3,
+      "page": 3,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0003.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 92512
+    },
+    {
+      "index": 4,
+      "page": 4,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0004.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 91663
+    },
+    {
+      "index": 5,
+      "page": 5,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0005.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 160750
+    },
+    {
+      "index": 6,
+      "page": 6,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0006.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 21887
+    },
+    {
+      "index": 7,
+      "page": 7,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0007.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 51388
+    },
+    {
+      "index": 8,
+      "page": 8,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0008.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 144956
+    },
+    {
+      "index": 9,
+      "page": 9,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_v3\\page-0009.png",
+      "width": 910,
+      "height": 1287,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.7333333333333,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 33402
+    }
+  ],
+  "missingFonts": [
+    "Courier"
+  ]
+}

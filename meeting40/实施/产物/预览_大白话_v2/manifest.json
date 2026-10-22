@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "pdfium",
+  "source": "saved",
+  "inputPath": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\AHI3.0_图文报告_v3.0_大白话.pdf",
+  "sourceSha256": "f8a7225030c68ba6cf7ce32ca76a7a62bb351b851010e79347647736ad4c008b",
+  "dpi": 100,
+  "pageCount": 6,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0001.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 254337
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0002.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 285913
+    },
+    {
+      "index": 3,
+      "page": 3,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0003.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 289595
+    },
+    {
+      "index": 4,
+      "page": 4,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0004.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 224163
+    },
+    {
+      "index": 5,
+      "page": 5,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0005.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 245301
+    },
+    {
+      "index": 6,
+      "page": 6,
+      "path": "<workspace>/\03_AHI\\AHI3\\meeting40\\实施\\产物\\预览_大白话_v2\\page-0006.png",
+      "width": 827,
+      "height": 1170,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 793.2666666666667,
+        "height": 1122.5333333333333
+      },
+      "byteLength": 142299
+    }
+  ],
+  "missingFonts": []
+}

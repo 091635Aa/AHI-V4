@@ -1,0 +1,223 @@
+{
+  "P1": {
+    "all_passed": false,
+    "per_seed": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "干预效应 4.80 / 对照 0.00 / ECE 0.1446 ｜ v2：可失败 1/2 通过；有判别力 1；Nec=1 者 2；剔除恒真/控制 1 条（阴性对照效应量（消融读出层 conf））",
+    "passed_falsifiable": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "v2": {
+      "n_total": 3,
+      "n_falsifiable": 2,
+      "n_falsifiable_passed": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n_power": 1,
+      "n_nec": 2,
+      "excluded": [
+        "阴性对照效应量（消融读出层 conf）"
+      ]
+    }
+  },
+  "P2": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "接口齐备；切断偏离 5.238（诚实边界：本验证不证明仿真湿件具有体验） ｜ v2：可失败 1/1 通过；有判别力 0；Nec=1 者 0；剔除恒真/控制 2 条（接口方法完整性、湿件存活）",
+    "passed_falsifiable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "v2": {
+      "n_total": 3,
+      "n_falsifiable": 1,
+      "n_falsifiable_passed": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_power": 0,
+      "n_nec": 0,
+      "excluded": [
+        "接口方法完整性",
+        "湿件存活"
+      ]
+    }
+  },
+  "P3": {
+    "all_passed": false,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "worst": "span=0.113 G2a=0.910 G2b_diff=+0.915 G1b=5.57 G3_JS=2.250 G4=0.930 G5=4/4 G6=0.0154 ｜ v2：可失败 8/8 通过；有判别力 4；Nec=1 者 0",
+    "passed_falsifiable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "v2": {
+      "n_total": 8,
+      "n_falsifiable": 8,
+      "n_falsifiable_passed": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "n_power": 4,
+      "n_nec": 0,
+      "excluded": []
+    }
+  },
+  "P4": {
+    "all_passed": false,
+    "per_seed": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "worst": "Phi*=10.3791(代理,非Φ) O-info差=0.303 zz差=-0.682 ｜ v2：可失败 2/3 通过；有判别力 2；Nec=1 者 0",
+    "passed_falsifiable": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "v2": {
+      "n_total": 3,
+      "n_falsifiable": 3,
+      "n_falsifiable_passed": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        2
+      ],
+      "n_power": 2,
+      "n_nec": 0,
+      "excluded": []
+    }
+  },
+  "P5": {
+    "all_passed": true,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "worst": "F_max=0.399 暗室上升=+0.1274 dL=1.3457 ｜ v2：可失败 3/3 通过；有判别力 3；Nec=1 者 0；剔除恒真/控制 1 条（无外部奖励项（代码审计））",
+    "passed_falsifiable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "v2": {
+      "n_total": 4,
+      "n_falsifiable": 3,
+      "n_falsifiable_passed": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "n_power": 3,
+      "n_nec": 0,
+      "excluded": [
+        "无外部奖励项（代码审计）"
+      ]
+    }
+  },
+  "P6": {
+    "all_passed": false,
+    "per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "worst": "kappa=0.600 迟滞=1.000 MI=+0.0153 跨分支R2=-27.543 吸引子比=5.0× ｜ v2：可失败 3/3 通过；有判别力 1；Nec=1 者 1；剔除恒真/控制 3 条（kappa = ||J||_2、不动点 <=12 NFE 收敛率、迟滞率 H）",
+    "passed_falsifiable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "v2": {
+      "n_total": 6,
+      "n_falsifiable": 3,
+      "n_falsifiable_passed": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "n_power": 1,
+      "n_nec": 1,
+      "excluded": [
+        "kappa = ||J||_2",
+        "不动点 <=12 NFE 收敛率",
+        "迟滞率 H"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+﻿{
+    "真人mel_GL64":  {
+                       "秒":  38.9,
+                       "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+                   },
+    "v0平静":  {
+                 "秒":  47.6,
+                 "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+             },
+    "v1A4平静":  {
+                   "秒":  39.2,
+                   "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+               },
+    "真人参考":  {
+                 "秒":  48.6,
+                 "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+             },
+    "v1A4高兴P2":  {
+                     "秒":  39.9,
+                     "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+                 },
+    "v0高兴":  {
+                 "秒":  41.1,
+                 "答":  "https://github.com/ggml-org/llama.cpp/discussions/13759 Hello\u003c|im_end|\u003e Hi there\u003c|im_end|\u003e How are you?\u003c|im_end|\u003e"
+             }
+}
